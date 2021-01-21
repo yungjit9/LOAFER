@@ -1,20 +1,25 @@
 ﻿using System;
 
-namespace LOAFER
+namespace PLOAFER
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("planet jupiter");
+            string firstName = "helios";
 
-            int a = 600000;
-            int b = 3;
-            int c = 0;
+            string lastname = "johnson";
 
-            c = a * b;
-            Console.WriteLine(c);
+            string name = $"hi my name is {firstName} {lastname}";
+
+
+            Console.WriteLine(name);
+
+
+
+            
+
+
             
         }
     }
