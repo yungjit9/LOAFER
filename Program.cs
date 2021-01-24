@@ -6,13 +6,27 @@ namespace PLOAFER
     {
         static void Main()
         {
-            DateTime myDateTimeVariable = DateTime.Now;
-            DateTime myDateTimeVariable2 = new DateTime(2021, 2, 15);
-
-            int result = DateTime.Compare( myDateTimeVariable, myDateTimeVariable2);
+            bool myResponse = true;
+            int counter = 1;
 
 
-            Console.WriteLine(result);
+            while (myResponse)
+
+                Console.WriteLine(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10);
+                counter++;
+
+            if (counter>10)
+
+            
+
+
+            myResponse = false;
+
+
+            
+
+
+            
 
 
            
