@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PLOAFER
 {
@@ -6,49 +8,61 @@ namespace PLOAFER
     {
         static void Main()
         {
-            bool myResponse = true;
-            int counter = 1;
+            List<string> mylist = new List<string>();
+            mylist.Add("user_1");
+            mylist.Add("user_2");
+            mylist.Add("user_3");
+            mylist.Add("user_4");
+            mylist.Add("user_5");
+            mylist.Add("user_6");
 
+            string result = mylist.Select(number => number).First();
 
-            while (myResponse)
-
-                Console.WriteLine(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10);
-                counter++;
-
-            if (counter>10)
-
-            
-
-
-            myResponse = false;
-
-
-            
-
-
-            
-
-
-           
-
-               
-
-            
-
-            
-
-            
-            
-
-
-            
+            Console.WriteLine(result);
 
 
 
-            
 
 
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
