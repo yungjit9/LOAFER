@@ -1,68 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
 
-namespace PLOAFER
+namespace BakeryShoppingCart
 {
     class Program
     {
         static void Main()
         {
-            List<string> mylist = new List<string>();
-            mylist.Add("user_1");
-            mylist.Add("user_2");
-            mylist.Add("user_3");
-            mylist.Add("user_4");
-            mylist.Add("user_5");
-            mylist.Add("user_6");
+            string response = "";
 
-            string result = mylist.Select(number => number).First();
+            ShoppingCart myShoppingCart = new ShoppingCart();
 
-            Console.WriteLine(result);
+            while (response!="5")
+            {
+                myShoppingCart.PrintMenu();
 
+                response = myShoppingCart.CaptureResponse();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                switch(response)
+                {
+                    case "1":
+                        myShoppingCart.CreateUser();
+                        break;
+                    case "2":
+                        myShoppingCart.CreateCakeReview();
+                        break;
+                    case "3":
+                        myShoppingCart.ShowAllExistingUsers();
+                        break;
+                    case "4":
+                        myShoppingCart.ShowAllExistingCakeReviews();
+                        break;
+                    case "5":
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
