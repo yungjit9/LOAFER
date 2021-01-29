@@ -1,6 +1,8 @@
 ﻿using System;
 using BakeryShoppingCart.Models;
 using BakeryShoppingCart.DTOS;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BakeryShoppingCart
 {
@@ -8,36 +10,24 @@ namespace BakeryShoppingCart
     {
         static void Main()
         {
-            string response = "";
+            List<Cake> mylist = new List<Cake>(); 
 
-            ShoppingCart myShoppingCart = new ShoppingCart();
+            Cake myFirstCake = new Cake();
+            myFirstCake.CakeId = 1;
+            myFirstCake.Flavor = "chocolate";
+            myFirstCake.Form = "square";
+            myFirstCake.Size = "medium";
+            myFirstCake.Type = "wedding cake";
 
-            while (response!="5")
-            {
-                myShoppingCart.PrintMenu();
+            mylist.Add(myFirstCake);
 
-                response = myShoppingCart.CaptureResponse();
+            Cake result = mylist.Select(Cake => Cake).First();
 
-                switch(response)
-                {
-                    case "1":
-                        myShoppingCart.CreateUser();
-                        break;
-                    case "2":
-                        myShoppingCart.CreateCakeReview();
-                        break;
-                    case "3":
-                        myShoppingCart.ShowAllExistingUsers();
-                        break;
-                    case "4":
-                        myShoppingCart.ShowAllExistingCakeReviews();
-                        break;
-                    case "5":
-                        break;
-                    default:
-                        break;
-                }
-            }
+            Console.WriteLine(result.Form);
+
+
+
+           
         }
     }
 }
