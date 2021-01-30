@@ -1,0 +1,30 @@
+using System;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
+
+namespace BakeryShoppingCart
+{
+    class Program
+    {
+        static void Main()
+        {
+            Myclass<int> newClass = new Myclass<int>();
+            newClass.Myproperty = "A value";
+            newClass.Myproperty2 = 99999;
+
+            newClass.PrintSomething();
+            newClass.PrintSomethingElse(99999);
+
+         
+        }
+          
+    }
+}
+
+public class Myclass<t>
+{
+    public string MyProperty { get; set; }
+    public T MyProperty2 { get; set; }
+
+
+    public void PrintSomething()      
