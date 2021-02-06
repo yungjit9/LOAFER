@@ -1,0 +1,18 @@
+using System;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
+using BakeryShoppingCart.Exceptions;
+using System.IO;
+
+namespace BakeryShoppingCart
+{
+    class Program
+    {
+        static void Main()
+        {
+            string path = "..//..//file.txt";
+
+            File.Create(path);
+        }
+    }
+}
