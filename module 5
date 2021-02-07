@@ -1,0 +1,23 @@
+using System;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
+using BakeryShoppingCart.Exceptions;
+using System.IO;
+
+namespace BakeryShoppingCart
+{
+    class Program
+    {
+        static void Main()
+        {
+            int result = 0;
+
+            for (int x = 1;x< 21; x++)
+            {
+                result = result + x;
+            }
+
+            Console.WriteLine(result);
+        }
+    }
+}
