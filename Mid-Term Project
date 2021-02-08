@@ -1,0 +1,71 @@
+using System;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
+using BakeryShoppingCart.Exceptions;
+using System.IO;
+
+namespace BakeryShoppingCart
+{
+    class Program
+    {
+        static void Main()
+        {
+            string response = "";
+
+            while(response!="5")
+            {
+                Console.WriteLine("1. Create a User");
+                Console.WriteLine("2. Create a Comment);
+                Console.WriteLine("3.Print the list of Users");
+                Console.WriteLine("4.Print the list of comments");
+                Console.WriteLine("5.Exit");
+
+                Console.WriteLine("");
+                Console.WriteLine("Please select an option");
+                response = Console.ReadLine();
+
+                switch(response)
+                {
+                    case"1"
+                        User user = new User();
+                        user.Email = "myemail@somewhere.com";
+                        user.Password = "password";
+                        user.UserId = 1;
+                        user.UserName = "Huncho";
+
+                        userList.Add(user);
+
+                        Console.WriteLine("You have created a user")
+                        break;
+                    case "2":
+                        Comment myComment = new Comment();
+                        myComment.CommentId = 1;
+                        myComment.TheComment = "Hello";
+
+                        commentList.Add(myComment);
+
+                        Console.WriteLine("You have created a comment");
+                        break;
+                    case "3":
+                        forecach(var user in userList)
+                            {
+                               Console.WriteLine(insideuser.Email);
+                               Console.WriteLine(insideuser.Password);
+                               Console.WriteLine(insideuser.UserName.UserId);
+                               Console.WriteLine(insideuser.UserName);
+
+                            }
+                            break;
+                        case "4"
+                            Console.WriteLine("This is the list of user created:")
+
+                            foreach (var insideUser in userList)
+                            {
+                            Console.WriteLine("The user email is: " + insideComment.Comment);
+                            Console.WriteLine("the user Password is:" + insideComment.TheComment);
+
+
+                            }
+                        break;
+                        
+                }
