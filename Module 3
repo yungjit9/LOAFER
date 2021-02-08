@@ -1,0 +1,19 @@
+using System;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
+using BakeryShoppingCart.Exceptions;
+using System.IO;
+
+namespace BakeryShoppingCart
+{
+    class Program
+    {
+        static void Main()
+        {
+            CommentDTO commnet = new CommentDTO();
+            comment.TheComment = "This is a comment";
+
+            Console.WriteLine("The value of my first property is: " + comment.TheComment);
+        }
+    }
+}
