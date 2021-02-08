@@ -1,0 +1,28 @@
+using System;
+using BakeryShoppingCart.Models;
+using BakeryShoppingCart.DTOS;
+using BakeryShoppingCart.Exceptions;
+using System.IO;
+
+namespace BakeryShoppingCart
+{
+    MyClass myVariable = new MyClass();
+    myVariable.MyMethod<string>("string 1", "string 2" );
+
+    Console.WriteLine(myVariable.MyProperty1);
+    Console.WriteLine(myVariable.MyProperty2);
+
+
+
+    public class Program
+    {
+        public string MyProperty1 { get; set; }
+        public string MyProperty2 { get; set; }
+
+        public void MyMethod<T>(T parameter1, T parameter1, T parameter2)
+        {
+            this.MyProperty1 = parameter1.ToString();
+            this.Myproperty2 = parameter2.ToString();
+        }
+    }
+}
